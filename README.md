@@ -1,7 +1,7 @@
-此為docker-elk6.5.0 /n
-從官方docker-elk更改 https://github.com/deviantony/docker-elk /n
-以下操作為乾淨環境完整操作 /n
-若使用此docker-elk不用全部操作 /n
+此為docker-elk6.5.0 /n/r
+從官方docker-elk更改 https://github.com/deviantony/docker-elk /n/r
+以下操作為乾淨環境完整操作 /n/r
+若使用此docker-elk不用全部操作 /n/r
 # 操作流程
 # 環境CentOS7
 (root操作)
