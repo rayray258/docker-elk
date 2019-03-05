@@ -1,18 +1,18 @@
 
-啟動docker
+# 啟動docker
 
     $ systemctl start docker
     $ systemctl enable docker
     (enable 設定開機後啟動)
     $ systemctl status docker(檢查狀態)
     
-pull Docker images(ELK)
+# pull Docker images(ELK)
 
     $ docker pull docker.elastic.co/elasticsearch/elasticsearch:6.5.0
     $ docker pull docker.elastic.co/kibana/kibana:6.5.0
     $ docker pull docker.elastic.co/logstash/logstash:6.5.0
 
-安裝docker-compose
+# 安裝docker-compose
 
     $ sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
     $ sudo chmod +x /usr/local/bin/docker-compose
@@ -29,7 +29,7 @@ pull Docker images(ELK)
 
 docker-compose設定
 
-使用官方(docker-elk)
+# 使用官方(docker-elk)
 
     $ yum install git-all
     $ git clone https://github.com/deviantony/docker-elk
@@ -88,24 +88,23 @@ docker-compose.yml   設定更改↓↓↓↓
     
 
 
-開啟ELK
+# 開啟ELK
 
 docker-compose up -d
 
 
 
-注意事項
+# 注意事項
 
 安全性關閉
 
     $ setenforce 0
 
-vim /etc/selinux/config  (更改)
-
+    $ vim /etc/selinux/config  (更改)
     SELINUX=Disabled
 
 
-更改設定方便查詢log
+# 更改設定方便查詢log
 
 vi docker-elk/logstash/pipeline/logstash.conf
 
@@ -125,7 +124,7 @@ vi docker-elk/logstash/pipeline/logstash.conf
             }
     }
 
-更改完後方便查詢
+# 更改完後方便查詢
 
 ![](https://d2mxuefqeaa7sj.cloudfront.net/s_4F58DEE54C5B92DE1FD3D97F5D2B0C610EAA119B86D4017CCF71D16141D5606D_1548745236907_image.png)
 
