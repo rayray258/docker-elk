@@ -1,27 +1,18 @@
-docker-elk
-
-架設CentOS7環境
-
-(以root操作)
-
-安裝docker
-
-yum -y install docker
-
 
 啟動docker
     $ systemctl start docker
     $ systemctl enable docker
     (enable 設定開機後啟動)
     $ systemctl status docker(檢查狀態)
+    
 pull Docker images(ELK)
     $ docker pull docker.elastic.co/elasticsearch/elasticsearch:6.5.0
+    
     $ docker pull docker.elastic.co/kibana/kibana:6.5.0
+    
     $ docker pull docker.elastic.co/logstash/logstash:6.5.0
+
 安裝docker-compose
-https://docs.docker.com/compose/install/
-
-
 
     $ sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
     $ sudo chmod +x /usr/local/bin/docker-compose
