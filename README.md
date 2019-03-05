@@ -1,15 +1,15 @@
 
 啟動docker
+
     $ systemctl start docker
     $ systemctl enable docker
     (enable 設定開機後啟動)
     $ systemctl status docker(檢查狀態)
     
 pull Docker images(ELK)
+
     $ docker pull docker.elastic.co/elasticsearch/elasticsearch:6.5.0
-    
     $ docker pull docker.elastic.co/kibana/kibana:6.5.0
-    
     $ docker pull docker.elastic.co/logstash/logstash:6.5.0
 
 安裝docker-compose
@@ -21,10 +21,10 @@ pull Docker images(ELK)
 
 
 
-elasticsearch設定
+# elasticsearch設定
 
-sysctl -w vm.max_map_count=262144
-值要大於262144
+    $sysctl -w vm.max_map_count=262144
+    (值要大於262144)
 
 
 docker-compose設定
