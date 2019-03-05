@@ -27,9 +27,9 @@
     (值要大於262144)
 
 
-docker-compose設定
+# docker-compose設定
 
-# 使用官方(docker-elk)
+使用官方(docker-elk)
 
     $ yum install git-all
     $ git clone https://github.com/deviantony/docker-elk
